@@ -16,7 +16,7 @@ use yii\bootstrap5\NavBar;
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
+            'class' => 'shadow navbar navbar-expand-md navbar-dark bg-dark fixed-top',
         ],
     ]);
     $menuItems = [
