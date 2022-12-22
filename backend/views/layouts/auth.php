@@ -13,11 +13,7 @@ use yii\bootstrap5\NavBar;
 AppAsset::register($this);
 $this->beginContent( viewFile: '@backend/views/layouts/base.php');
 ?>
-<?php echo $this->render(view: '_header') ?>
-
 <main role="main" class="d-flex">
-    
-    <?php echo $this->render(view: '_sidebar') ?>
 
     <div class="content-wrapper p-3">
         <?= Breadcrumbs::widget([
@@ -27,7 +23,5 @@ $this->beginContent( viewFile: '@backend/views/layouts/base.php');
         <?= $content ?>
     </div>
 </main>
-
-<?php echo $this->render(view: '_footer') ?>
 
 <?php $this->endContent() ?>
