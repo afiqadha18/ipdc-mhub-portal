@@ -22,13 +22,16 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="d-flex flex-column h-100">
+<body class="wrap d-flex flex-column h-100">
 <?php $this->beginBody() ?>
 
 <?php echo $this->render(view: '_header') ?>
 
-<main role="main" class="flex-shrink-0">
-    <div class="container">
+<main role="main" class="d-flex">
+    
+    <?php echo $this->render(view: '_sidebar') ?>
+
+    <div class="content-wrapper p-3">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
@@ -37,12 +40,7 @@ AppAsset::register($this);
     </div>
 </main>
 
-<footer class="footer mt-auto py-3 text-muted">
-    <div class="container">
-        <p class="float-start">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-        <p class="float-end"><?= Yii::powered() ?></p>
-    </div>
-</footer>
+<?php echo $this->render(view: '_footer') ?>
 
 <?php $this->endBody() ?>
 </body>
