@@ -5,6 +5,7 @@ body {
 
 main {
     flex: 1;
+    margin-top: 80px !important;
 }
 .content-wrapper{
     flex: 1;

@@ -15,9 +15,9 @@ $this->beginContent( viewFile: '@backend/views/layouts/base.php');
 ?>
 <?php echo $this->render(view: '_header') ?>
 
-<main role="main" class="d-flex">
+<main role="main" class="d-flex-column">
     
-    <?php echo $this->render(view: '_sidebar') ?>
+<?php echo $this->render(view: '_sidebar') ?>
 
     <div class="content-wrapper p-3">
         <?= Breadcrumbs::widget([

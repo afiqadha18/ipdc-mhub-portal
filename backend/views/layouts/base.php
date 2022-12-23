@@ -17,6 +17,8 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>" class="h-100">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
+    <!-- <meta http-equiv='refresh' content='1'> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
@@ -24,10 +26,8 @@ AppAsset::register($this);
 </head>
 <body class="wrap h-100 d-flex flex-column">
 <?php $this->beginBody() ?>
-
-<?php echo $content ?>
-
-<?php $this->endBody() ?>
+    <?php echo $content ?>
+    <?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage();
