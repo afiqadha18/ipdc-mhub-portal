@@ -25,6 +25,14 @@ use yii\bootstrap5\NavBar;
                 'url' => ['/user/management']
             ],
             [
+                'label' => 'User Group',
+                'url' => ['/user/group']
+            ],
+            [
+                'label' => 'User Provisioning',
+                'url' => ['/user/provisioning']
+            ],
+            [
                 'label' => 'Equipment Management',
                 'url' => ['/equipment/management']
             ],

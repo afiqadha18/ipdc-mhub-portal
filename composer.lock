@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "09e61c13c81979fb22c4114be08c36c7",
+    "content-hash": "d180f30cf76a87f2c55c841a4762f75f",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
             "version": "v5.2.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
+                "url": "git@github.com:twbs/bootstrap.git",
                 "reference": "cb021439c683d9805e2864c58095b92d405e9b11"
             },
             "dist": {
@@ -26,7 +26,7 @@
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "git@github.com:RobinHerbots/Inputmask.git",
+                "url": "https://github.com/RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -44,16 +44,16 @@
         },
         {
             "name": "bower-asset/jquery",
-            "version": "3.6.2",
+            "version": "3.6.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:jquery/jquery-dist.git",
-                "reference": "17f2a6864677d6dca5c1a2f05c02420ad899045b"
+                "reference": "da0f228131a578aea168b799fe4d7fe01764c98b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/17f2a6864677d6dca5c1a2f05c02420ad899045b",
-                "reference": "17f2a6864677d6dca5c1a2f05c02420ad899045b"
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/da0f228131a578aea168b799fe4d7fe01764c98b",
+                "reference": "da0f228131a578aea168b799fe4d7fe01764c98b"
             },
             "type": "bower-asset",
             "license": [

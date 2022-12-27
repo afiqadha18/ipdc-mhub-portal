@@ -110,17 +110,17 @@
         },
         {
             "name": "bower-asset/jquery",
-            "version": "3.6.2",
-            "version_normalized": "3.6.2.0",
+            "version": "3.6.3",
+            "version_normalized": "3.6.3.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:jquery/jquery-dist.git",
-                "reference": "17f2a6864677d6dca5c1a2f05c02420ad899045b"
+                "reference": "da0f228131a578aea168b799fe4d7fe01764c98b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/17f2a6864677d6dca5c1a2f05c02420ad899045b",
-                "reference": "17f2a6864677d6dca5c1a2f05c02420ad899045b"
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/da0f228131a578aea168b799fe4d7fe01764c98b",
+                "reference": "da0f228131a578aea168b799fe4d7fe01764c98b"
             },
             "type": "bower-asset",
             "installation-source": "dist",
