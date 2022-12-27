@@ -17,7 +17,7 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>" class="h-100">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
-    <!-- <meta http-equiv='refresh' content='1'> -->
+    <meta http-equiv='refresh' content='2'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php $this->registerCsrfMetaTags() ?>

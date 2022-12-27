@@ -10,9 +10,10 @@ use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 ?>
 
-<footer class="footer mt-auto py-3 text-muted">
+<footer class="footer mt-auto py-2 text-muted">
     <div class="container">
-        <p class="float-start">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-        <p class="float-end"><?= Yii::powered() ?></p>
+        <p class="float-start">&copy; <?= Html::encode(Yii::$app->name) ?> | <?= date('M Y') ?></p>
+        <!-- <p class="float-end"><?= Yii::powered() ?></p> -->
+        <p class="float-end">version 1.1 - <?= date('d M Y') ?></p>
     </div>
 </footer>

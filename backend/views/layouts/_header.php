@@ -8,6 +8,7 @@ use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
+use yii\bootstrap5\Button;
 ?>
 
 <header>
@@ -16,11 +17,11 @@ use yii\bootstrap5\NavBar;
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'shadow navbar navbar-expand-md navbar-dark bg-dark fixed-top',
+            'class' => 'shadow navbar navbar-expand-md navbar-bg fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'Dashboard', 'url' => ['/site/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -32,10 +33,14 @@ use yii\bootstrap5\NavBar;
     if (Yii::$app->user->isGuest) {
         echo Html::tag('div',Html::a('Login',['/site/login'],['class' => ['btn btn-link login text-decoration-none']]),['class' => ['d-flex']]);
     } else {
+        echo Button::widget([
+            'label' => 'User - ' . Yii::$app->user->identity->username,
+            'options' => ['class' => 'btn btn-profile'],
+        ]);
         echo Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex'])
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout text-decoration-none']
+                'Logout',
+                ['class' => 'btn btn-link logout text-decoration-none btn-logout']
             )
             . Html::endForm();
     }

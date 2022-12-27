@@ -5,28 +5,62 @@ body {
 
 main {
     flex: 1;
-    margin-top: 80px !important;
+    margin-top: 56px !important;
 }
 .content-wrapper{
     flex: 1;
+    background-color: #FFF5EE;
 }
 aside{
-    min-width: 400px;
+    min-width: 250px;
+    background-color: #000080;
 }
 aside .nav-pills .nav-link {
     border-radius: 0;
-    color: #444444;
+    color: #EFEFE9;
+    margin-top: 6px;
 }
 
 
 aside .nav-pills .nav-link:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: #1034A6;
 }
 
 aside .nav-pills .nav-link.active {
-    background: rgba(0, 0, 0, 0.05);
-    color: #b90000;
-    border-left: 4px solid #b90000;
+    background: #000080;
+    color: #EFEFE9;
+    border-left: 6px solid #F79802;
+    font-weight: 600;
+}
+
+footer {
+    background:#ff8c00;
+}
+
+.footer-custom {
+    min-width: 240px;
+    margin: 0 0 5px 0;
+    padding: 0;
+    color: #B2FFFF;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-custom .footer-main {
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+}
+
+.footer-custom .footer-text {
+    font-size: 10px;
+    text-align: center;
+    margin:0;
+    font-style: italic;
+}
+
+.navbar-bg {
+    background-color: #ff8b28;
 }
 
 .upload-icon {
@@ -53,6 +87,37 @@ aside .nav-pills .nav-link.active {
     width: 100%;
     height: 100%;
     opacity: 0;
+}
+
+.btn-logout {
+    background-color: #000080;
+    color: #EFEFE9;
+    font-size: 17px;
+    height: 40px;
+    width: 100px;
+}
+
+.btn-logout:hover {
+    background-color: #000080;
+    color: #EFEFE9;
+    font-weight: 600;
+    transition: font-weight 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.btn-profile {
+    color: #EFEFE9;
+    font-size: 17px;
+    height: 40px;
+    width: 150px;
+    font-weight: 500;
+}
+
+.btn-profile:hover {
+    color: #EFEFE9;
+    font-weight: 700;
+    transition: font-weight 0.5s;
+    transition-timing-function: ease-in-out;
 }
 
 .comment-wrapper {

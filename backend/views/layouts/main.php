@@ -15,11 +15,11 @@ $this->beginContent( viewFile: '@backend/views/layouts/base.php');
 ?>
 <?php echo $this->render(view: '_header') ?>
 
-<main role="main" class="d-flex-column">
+<main role="main" class="d-flex">
     
-<?php echo $this->render(view: '_sidebar') ?>
+    <?php echo $this->render(view: '_sidebar') ?>
 
-    <div class="content-wrapper p-3">
+    <div class="content-wrapper p-4">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
@@ -28,6 +28,6 @@ $this->beginContent( viewFile: '@backend/views/layouts/base.php');
     </div>
 </main>
 
-<?php echo $this->render(view: '_footer') ?>
+<?php /** echo $this->render(view: '_footer') */ ?>
 
 <?php $this->endContent() ?>
