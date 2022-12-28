@@ -22,7 +22,7 @@ use yii\bootstrap5\NavBar;
             ],
             [
                 'label' => 'User Management',
-                'url' => ['/user/management']
+                'url' => ['/usermanagement/index']
             ],
             [
                 'label' => 'User Group',
