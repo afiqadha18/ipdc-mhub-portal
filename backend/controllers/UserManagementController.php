@@ -31,6 +31,7 @@ class UserManagementController extends Controller
         );
     }
 
+
     /**
      * Lists all UserManagement models.
      *
