@@ -53,6 +53,7 @@ use yii\bootstrap5\NavBar;
         <p class="footer-main">&copy; <?= Html::encode(Yii::$app->name) ?> | <?= date('M Y') ?></p>
         <!-- <p class="float-end"><?= Yii::powered() ?></p> -->
         <p class="footer-text">version 1.1 - <?= date('d M Y') ?></p>
+        <i class="fa-solid fa-user-gear"></i>
     </div>
 
 </aside>

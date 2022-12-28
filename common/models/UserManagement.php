@@ -62,10 +62,10 @@ class UserManagement extends \yii\db\ActiveRecord
             'role' => 'Role',
             'group' => 'Group',
             'status' => 'Status',
-            'create_by' => 'Create By',
-            'create_date' => 'Create Date',
-            'update_by' => 'Update By',
-            'update_date' => 'Update Date',
+            'create_by' => 'Created By',
+            'create_date' => 'Created Date',
+            'update_by' => 'Updated By',
+            'update_date' => 'Updated Date',
             'remark' => 'Remark',
         ];
     }

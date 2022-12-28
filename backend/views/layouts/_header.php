@@ -9,6 +9,7 @@ use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 use yii\bootstrap5\Button;
+
 ?>
 
 <header>
@@ -34,7 +35,8 @@ use yii\bootstrap5\Button;
         echo Html::tag('div',Html::a('Login',['/site/login'],['class' => ['btn btn-link login text-decoration-none']]),['class' => ['d-flex']]);
     } else {
         echo Button::widget([
-            'label' => 'User - ' . Yii::$app->user->identity->username,
+            'encodeLabel' => true,
+            'label' =>  'User - ' . Yii::$app->user->identity->username,
             'options' => ['class' => 'btn btn-profile'],
         ]);
         echo Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex'])
