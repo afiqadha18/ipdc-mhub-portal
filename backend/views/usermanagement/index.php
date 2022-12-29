@@ -5,6 +5,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
+use yii\bootstrap5\Modal;
 
 /** @var yii\web\View $this */
 /** @var yii\data\ActiveDataProvider $dataProvider */
@@ -14,6 +15,20 @@ $this->title = 'mHub . User Management';
 ?>
 <div class="user-management-index">
 
+    <?php 
+        Modal::begin([
+            'title' => '<div class="title-main">Create User</div>',
+            'id' => 'modalCreateUser',
+            'size' => 'modal-xl',
+        ]);
+
+        echo "<div id='modalCreateUserContent'></div>";
+
+        Modal::end();
+
+    ?>
+
+
     <!-- <h1><?= Html::encode($this->title) ?></h1> -->
     <div class="title-main">
         User Management
@@ -21,9 +36,11 @@ $this->title = 'mHub . User Management';
     <div class="title-sub">
         View . Updates . Add . Delete
     </div>
-    <div class="title-desciption">
-        to be registered in equipment
+    <div class="title-description">
+        to be registered the in equipment
     </div>
+
+    <div class="row-space"></div>
 
 
     <?= GridView::widget([
@@ -54,7 +71,8 @@ $this->title = 'mHub . User Management';
     ]); ?>
 
     <p>
-        <?= Html::a('Create User Management', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::button('Create User', ['value' => Url::to('/usermanagement/create'), 'class' => 'btn btn-success', 'id' => 'btnCreateUser']) ?>
+        <!-- <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?> -->
     </p>
 
 
