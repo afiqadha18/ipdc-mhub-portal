@@ -157,3 +157,22 @@ footer {
 .row-space {
     margin: 20px 0;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+}
+  
+::-webkit-input-placeholder { /* Edge */
+    color: #202020 !important;
+    opacity: 0.5 !important;
+    font-style: italic !important;
+}
+
+.form-custom {
+    font-size: 14px;
+}

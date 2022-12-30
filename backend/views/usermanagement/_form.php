@@ -15,7 +15,13 @@ use yii\bootstrap5\ActiveForm;
     <div class="container">
         <div class="row">
             <div class="col">
-                <?= $form->field($model, 'username', ['options' => ['autocomplete' => 'off']])->textInput(array('size' => 50, 'maxlength' => 50 , 'disabled' => false, 'placeholder' => 'e.g: ipdc_admin')) ?>
+                <?= $form->field($model, 'username', ['options' => ['autocomplete' => 'off']])->textInput(array(
+                    'size' => 50,
+                    'maxlength' => 50 ,
+                    'disabled' => false,
+                    'placeholder' => 'ipdc_admin',
+                    'class'=>'form-custom form-control',
+                )) ?>
             </div>
         </div>
         <div class="row">
@@ -40,6 +46,9 @@ use yii\bootstrap5\ActiveForm;
             </div>
             <div class="col">
                 <?= $form->field($model, 'group')->dropDownList(['System Admin' => 'System Admin', 'Engineer' => 'Engineer', 'Developer' => 'Developer', 'Management' => 'Management', 'Others' => 'Others']) ?>
+            </div>
+            <div class="col">
+            <?= $form->field($model, 'status')->dropDownList(['1' => 'Active', '0' => 'In-Active']) ?>
             </div>
         </div>
         <!-- <div class="row">
