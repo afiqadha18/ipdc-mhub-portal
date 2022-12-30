@@ -15,7 +15,7 @@ use yii\bootstrap5\ActiveForm;
     <div class="container">
         <div class="row">
             <div class="col">
-                <?= $form->field($model, 'username', ['options' => ['autocomplete' => 'off']])->textInput(array(
+                <?= $form->field($model, 'username', ['options' => ['autocomplete' => 'off', 'class' => 'form-content']])->textInput(array(
                     'size' => 50,
                     'maxlength' => 50 ,
                     'disabled' => false,
@@ -26,37 +26,82 @@ use yii\bootstrap5\ActiveForm;
         </div>
         <div class="row">
             <div class="col">
-                <?= $form->field($model, 'password', ['options' => ['autocomplete' => 'off']])->passwordInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'password', ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->passwordInput(array(
+                    'size' => 50,
+                    'maxlength' => 50 ,
+                    'disabled' => false,
+                    'class'=>'form-custom form-control',
+                )) ?>
             </div>
             <div class="col">
-                <?= $form->field($model, 'password', ['options' => ['autocomplete' => 'off']])->passwordInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'password', ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->passwordInput(array(
+                    'size' => 50,
+                    'maxlength' => 50 ,
+                    'disabled' => false,
+                    'class'=>'form-custom form-control',
+                )) ?>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <?= $form->field($model, 'fullname')->textInput((array('size' => 50, 'maxlength' => 50 , 'disabled' => false, 'placeholder' => 'e.g: IPDC Admin'))) ?>
+                <?= $form->field($model, 'fullname', ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->textInput(array(
+                    'size' => 50,
+                    'maxlength' => 50 ,
+                    'disabled' => false,
+                    'placeholder' => 'IPDC Admin',
+                    'class'=>'form-custom form-control',
+                )) ?>
             </div>
             <div class="col">
-                <?= $form->field($model, 'email')->textInput((array('size' => 50, 'maxlength' => 50 , 'disabled' => false, 'placeholder' => 'e.g: admin@ipdc.asia'))) ?>
+                <?= $form->field($model, 'email', ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->textInput(array(
+                    'size' => 50,
+                    'maxlength' => 50 ,
+                    'disabled' => false,
+                    'placeholder' => 'admin@ipdc.asia',
+                    'class'=>'form-custom form-control',
+                )) ?>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <?= $form->field($model, 'role')->dropDownList(['Super Admin' => 'Super Admin', 'Admin' => 'Admin', 'Level 2' => 'Level 2', 'Read-only' => 'Read-only']) ?>
+                <?= $form->field($model, 'role' , ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->dropDownList([
+                    'Super Admin' => 'Super Admin',
+                    'Admin' => 'Admin',
+                    'Level 2' => 'Level 2',
+                    'Read-only' => 'Read-only'
+                ], [
+                    'prompt'=>'Choose User Role',
+                    'class'=>'form-custom form-control',
+                ])?>
             </div>
             <div class="col">
-                <?= $form->field($model, 'group')->dropDownList(['System Admin' => 'System Admin', 'Engineer' => 'Engineer', 'Developer' => 'Developer', 'Management' => 'Management', 'Others' => 'Others']) ?>
+                <?= $form->field($model, 'group' , ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->dropDownList([
+                    'System Admin' => 'System Admin',
+                    'Engineer' => 'Engineer',
+                    'Developer' => 'Developer', 
+                    'Management' => 'Management',
+                    'Others' => 'Others'
+                ], [
+                    'prompt'=>'Choose User Group',
+                    'class'=>'form-custom form-control',
+                ])?>
             </div>
             <div class="col">
-            <?= $form->field($model, 'status')->dropDownList(['1' => 'Active', '0' => 'In-Active']) ?>
+                <?= $form->field($model, 'status' , ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->dropDownList([
+                    '1' => 'Active',
+                    '0' => 'In-Active'
+                ], [
+                    'prompt'=>'Choose User Status',
+                    'class'=>'form-custom form-control',
+                ])?>
             </div>
         </div>
         <!-- <div class="row">
             <div class="col">
-                <?= $form->field($model, 'create_by')->dropDownList([Yii::$app->user->identity->username => Yii::$app->user->identity->username]) ?>
+                <?= $form->field($model, 'create_by' , ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->dropDownList([Yii::$app->user->identity->username => Yii::$app->user->identity->username]) ?>
             </div>
             <div class="col">
-                <?= $form->field($model, 'create_date')->dropDownList(['test' => 'test']) ?>
+                <?= $form->field($model, 'create_date' , ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->dropDownList(['test' => 'test']) ?>
             </div>
         </div> -->
         <!-- <div class="row">
@@ -69,7 +114,12 @@ use yii\bootstrap5\ActiveForm;
         </div> -->
         <div class="row">
             <div class="col">
-                <?= $form->field($model, 'remark')->textarea(['rows' => 6]) ?>
+                <?= $form->field($model, 'remark')->textarea(array(
+                    'size' => 50,
+                    'maxlength' => 50 ,
+                    'disabled' => false,
+                    'class'=>'form-custom form-control',
+                )) ?>
             </div>
         </div>
     </div>

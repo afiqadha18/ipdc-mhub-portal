@@ -175,4 +175,37 @@ footer {
 
 .form-custom {
     font-size: 14px;
+    margin-top: 0 !important;
+    font-weight: 500;
+}
+
+.form-content {
+    margin-bottom: 10px !important;
+    padding-bottom: 0 !important;
+}
+
+.form-label {
+    font-weight: 300 !important;
+    margin-left: 3px !important;
+    margin-bottom: 2px !important;
+}
+
+.invalid-feedback {
+    margin-left: 3px !important;
+    margin-top: 3px !important;
+    font-size: 12px !important;
+    font-style: italic !important;
+    font-weight: 500;
+}
+
+.modal-header {
+    background-color: #ff8b28;
+    color: #EFEFE9;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-close:hover {
+    color: red !important;
+    opacity: 1 !important;
 }
