@@ -37,7 +37,7 @@ class UserManagement extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'username', 'password', 'fullname', 'email', 'role', 'group', 'status', 'create_by', 'create_date', 'update_by', 'update_date'], 'required'],
+            [['user_id', 'username', 'password', 'fullname', 'email', 'role', 'group', 'status', 'create_by', 'create_date'], 'required'],
             [['user_id', 'status', 'create_date', 'update_date'], 'integer'],
             [['remark'], 'string'],
             [['username'], 'string', 'max' => 10],
@@ -61,7 +61,7 @@ class UserManagement extends \yii\db\ActiveRecord
             'email' => 'Email',
             'role' => 'User Role',
             'group' => 'User Group',
-            'status' => 'Status',
+            'status' => 'User Status',
             'create_by' => 'Created By',
             'create_date' => 'Created Date',
             'update_by' => 'Updated By',

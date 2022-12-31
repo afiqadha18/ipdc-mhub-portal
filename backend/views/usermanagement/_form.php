@@ -6,11 +6,16 @@ use yii\bootstrap5\ActiveForm;
 /** @var yii\web\View $this */
 /** @var common\models\UserManagement $model */
 /** @var yii\widgets\ActiveForm $form */
+
+$curr_date = date('H:i:s Y-m-d');
+$int_date = strtotime($curr_date);
+
 ?>
 
 <div class="user-management-form">
 
     <?php $form = ActiveForm::begin([
+
     ]); ?>
     <div class="container">
         <div class="row">
@@ -68,7 +73,8 @@ use yii\bootstrap5\ActiveForm;
                     'Super Admin' => 'Super Admin',
                     'Admin' => 'Admin',
                     'Level 2' => 'Level 2',
-                    'Read-only' => 'Read-only'
+                    'Read-only' => 'Read-only',
+                    'IPDC System' => 'IPDC System'
                 ], [
                     'prompt'=>'Choose User Role',
                     'class'=>'form-custom form-control',
@@ -80,6 +86,7 @@ use yii\bootstrap5\ActiveForm;
                     'Engineer' => 'Engineer',
                     'Developer' => 'Developer', 
                     'Management' => 'Management',
+                    'System' => 'System',
                     'Others' => 'Others'
                 ], [
                     'prompt'=>'Choose User Group',
@@ -96,14 +103,24 @@ use yii\bootstrap5\ActiveForm;
                 ])?>
             </div>
         </div>
-        <!-- <div class="row">
+        <div class="row">
             <div class="col">
-                <?= $form->field($model, 'create_by' , ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->dropDownList([Yii::$app->user->identity->username => Yii::$app->user->identity->username]) ?>
+                <?= $form->field($model, 'create_by' , ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->textInput(array(
+                    'size' => 50,
+                    'maxlength' => 50 ,
+                    'disabled' => false,
+                    'value' => Yii::$app->user->identity->username,
+                    'class'=>'form-custom-disable form-control',
+                )) ?>
             </div>
             <div class="col">
-                <?= $form->field($model, 'create_date' , ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->dropDownList(['test' => 'test']) ?>
+                <?= $form->field($model, 'create_date' , ['options' => ['autocomplete' => 'off' , 'class' => 'form-content']])->dropDownList([
+                    $int_date => $curr_date
+                ], [
+                    'class'=>'form-custom-disable-dropdown form-control',
+                ])?>
             </div>
-        </div> -->
+        </div>
         <!-- <div class="row">
             <div class="col">
                 <?= $form->field($model, 'update_by')->textInput(['maxlength' => true]) ?>

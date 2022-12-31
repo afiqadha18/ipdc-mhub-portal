@@ -38,6 +38,7 @@ $this->title = 'mHub . User Management';
     </div>
     <div class="title-description">
         to be registered the in equipment
+        <br>
     </div>
 
     <div class="row-space"></div>

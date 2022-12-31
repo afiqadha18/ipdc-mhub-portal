@@ -125,6 +125,14 @@ footer {
     width: 150px;
     right: 0;
     margin: 0 30px 0 0;
+    background-color: #000080;
+}
+
+.btn-modal:hover {
+    background-color: #1034A6 !important;
+    font-weight: 600 !important;
+    transition: font-weight 0.5s !important;
+    transition-timing-function: ease-in-out;
 }
 
 .form-group {
@@ -177,6 +185,24 @@ footer {
     font-size: 14px;
     margin-top: 0 !important;
     font-weight: 500;
+}
+
+.form-custom-disable {
+    font-size: 14px;
+    margin-top: 0 !important;
+    font-weight: 500;
+    pointer-events:none;
+    color: #000000;
+    opacity: 0.6;
+}
+
+.form-custom-disable-dropdown {
+    font-size: 14px;
+    margin-top: 0 !important;
+    font-weight: 500;
+    pointer-events:none;
+    color: #000000;
+    opacity: 0.6;
 }
 
 .form-content {
