@@ -1,5 +1,5 @@
 # ipdc-mhub-portal
-version 1.0
+version 1.2
 
 ### Hello World!
 by AA. Dec 2022
