@@ -43,7 +43,11 @@ use yii\bootstrap5\NavBar;
             [
                 'label' => 'Portal Admin',
                 'url' => ['/user/admin']
-            ]
+            ],
+            [
+                'label' => 'AA',
+                'url' => ['/aa/index']
+            ],
         ]
     ])
     ?>

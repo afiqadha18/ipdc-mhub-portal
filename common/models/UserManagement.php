@@ -40,7 +40,7 @@ class UserManagement extends \yii\db\ActiveRecord
             [['user_id', 'username', 'password', 'fullname', 'email', 'role', 'group', 'status', 'create_by', 'create_date'], 'required'],
             [['user_id', 'status', 'create_date', 'update_date'], 'integer'],
             [['remark'], 'string'],
-            [['username'], 'string', 'max' => 10],
+            [['username'], 'string', 'max' => 20],
             [['password', 'fullname'], 'string', 'max' => 512],
             [['email'], 'string', 'max' => 100],
             [['role', 'group', 'create_by', 'update_by'], 'string', 'max' => 50],
